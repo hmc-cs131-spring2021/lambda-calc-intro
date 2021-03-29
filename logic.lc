@@ -1,0 +1,8 @@
+True  = (\x.(\y.x));
+False = (\x.(\y.y));
+Not   = (\b.((b False) True));
+And   = (\b.(\c.((b c) False)));
+Or    = (\b.(\c.((b True) c)));
+Pair = (\x.(\y. (\b.((b x) y)) ));
+Fst = (\p.(p True));
+Snd = (\p.(p False));
